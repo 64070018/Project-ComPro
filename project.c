@@ -12,64 +12,68 @@ void health_card(int num);
 int random(int numbers);
 int fill(int num1, int num2, int num3, int* n1, int* n2, int* n3);
 
+struct Info {
+    char name[1024], type[256];
+    int num1, num2, num3, n1, n2, n3;
+};
+
 int main()
 {
-    char name[1024], line[1024], type[256];
-    int num1, num2, num3, n1, n2, n3;
+    struct Info info;
     printf("---------------------------------------------------------------------------\n");
     printf("|                  Hello, I am the great fortune teller.                  |\n");
     printf("---------------------------------------------------------------------------\n");
     printf("Plese tell me your name : ");
-    scanf("%[^\n]", name);
-    printf("OK, So your name is \"%s\" \n\n", name);
+    scanf("%[^\n]", info.name);
+    printf("OK, So your name is \"%s\" \n\n", info.name);
 
     printf("Now, I will tell you your fortune.\n\n");
     printf("What do you want to know?\n");
     printf("|  Love\\ Money\\ Health\\ Work\\ Others  |\n");
-    scanf("%s", type);
-    for (int i = 0; i < strlen(type); i++) {
-        type[i] = tolower(type[i]);
+    scanf("%s", info.type);
+    for (int i = 0; i < strlen(info.type); i++) {
+        info.type[i] = tolower(info.type[i]);
     }
 
-    if (strcmp(type, "love") == 0) {
+    if (strcmp(info.type, "love") == 0) {
         printf("------------|   Love   |------------\n");
-        fill(num1, num2, num3, &n1, &n2, &n3);
+        fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
     
-        love_card(random(n1));
-        love_card(random(n2));
-        love_card(random(n3));
+        love_card(random(info.n1));
+        love_card(random(info.n2));
+        love_card(random(info.n3));
     }
-    else if (strcmp(type, "money") == 0) {
+    else if (strcmp(info.type, "money") == 0) {
         printf("------------|   Money   |------------\n");
-        fill(num1, num2, num3, &n1, &n2, &n3);
+        fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
     
-        money_card(random(n1));
-        money_card(random(n2));
-        money_card(random(n3));
+        money_card(random(info.n1));
+        money_card(random(info.n2));
+        money_card(random(info.n3));
     }
-    else if (strcmp(type, "work") == 0) {
+    else if (strcmp(info.type, "work") == 0) {
         printf("------------|    Work   |------------\n");
-        fill(num1, num2, num3, &n1, &n2, &n3);
+        fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
     
-        work_card(random(n1));
-        work_card(random(n2));
-        work_card(random(n3));
+        work_card(random(info.n1));
+        work_card(random(info.n2));
+        work_card(random(info.n3));
     }
-    else if (strcmp(type, "health") == 0) {
+    else if (strcmp(info.type, "health") == 0) {
         printf("------------|   Health   |------------\n");
-        fill(num1, num2, num3, &n1, &n2, &n3);
+        fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
     
-        health_card(random(n1));
-        health_card(random(n2));
-        health_card(random(n3));
+        health_card(random(info.n1));
+        health_card(random(info.n2));
+        health_card(random(info.n3));
     }
     else {
         printf("------------|   Others   |------------\n");
-        fill(num1, num2, num3, &n1, &n2, &n3);
+        fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
     
-        original_card(random(n1));
-        original_card(random(n2));
-        original_card(random(n3));
+        original_card(random(info.n1));
+        original_card(random(info.n2));
+        original_card(random(info.n3));
         }
     }
 
@@ -94,7 +98,8 @@ int fill(int num1, int num2, int num3, int* n1, int* n2, int* n3) {
         break;
     }
 
-    printf("------------|Second number |------------\n");
+    printf("------------| Second number |------------\n");
+    printf("Please enter a number.\n");
     while (fgets(line, sizeof(line), stdin))
     {
         if (sscanf(line, "%i ", &num2) != 1)
@@ -105,7 +110,7 @@ int fill(int num1, int num2, int num3, int* n1, int* n2, int* n3) {
     
         if (num1 == num2)
         {
-            fprintf(stderr, "The number can't be same as number 1\n");
+            fprintf(stderr, "The number can't be same as number 1.\n");
             continue;
         }
 
@@ -118,7 +123,8 @@ int fill(int num1, int num2, int num3, int* n1, int* n2, int* n3) {
         break;
     }
 
-    printf("------------|Third number |------------\n");
+    printf("------------| Third number |------------\n");
+    printf("Please enter a number.\n");
     while (fgets(line, sizeof(line), stdin))
     {
         if (sscanf(line, "%i ", &num3) != 1)
