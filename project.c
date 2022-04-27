@@ -9,7 +9,6 @@ void work_card(int num);
 void love_card(int num);
 void money_card(int num);
 void health_card(int num);
-void YorN(int num);
 int random(int numbers);
 int fill(int num1, int num2, int num3, int *n1, int *n2, int *n3);
 
@@ -84,9 +83,6 @@ int main()
             health_card(random(info.n2));
             printf("                                Future                                ");
             health_card(random(info.n3));
-        }
-        else if (strcmp(info.type, "idk") == 0){
-            //code;
         }
         else
         {
