@@ -9,6 +9,7 @@ void work_card(int num);
 void love_card(int num);
 void money_card(int num);
 void health_card(int num);
+void YorN(int num);
 int random(int numbers);
 int fill(int num1, int num2, int num3, int *n1, int *n2, int *n3);
 
@@ -33,7 +34,7 @@ int main()
     while (1)
     {
         printf("What do you want to know?\n");
-        printf("|  Love\\ Money\\ Health\\ Work\\ Others  |\n");
+        printf("|  Love\\ Finance\\ Health\\ Work\\ Others  |\n");
         scanf("%s", info.type);
         strlwr(info.type);
         if (strcmp(info.type, "love") == 0)
@@ -41,17 +42,23 @@ int main()
             printf("------------|   Love   |------------\n");
             fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
 
+            printf("                                 Past                                 ");
             love_card(random(info.n1));
+            printf("                                Present                                ");
             love_card(random(info.n2));
+            printf("                                Future                                ");
             love_card(random(info.n3));
         }
-        else if (strcmp(info.type, "money") == 0)
+        else if (strcmp(info.type, "finance") == 0)
         {
-            printf("------------|   Money   |------------\n");
+            printf("------------|   Finance   |------------\n");
             fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
 
+            printf("                                 Past                                 ");
             money_card(random(info.n1));
+            printf("                                Present                                ");
             money_card(random(info.n2));
+            printf("                                Future                                ");
             money_card(random(info.n3));
         }
         else if (strcmp(info.type, "work") == 0)
@@ -59,8 +66,11 @@ int main()
             printf("------------|    Work   |------------\n");
             fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
 
+            printf("                                 Past                                 ");
             work_card(random(info.n1));
+            printf("                                Present                                ");
             work_card(random(info.n2));
+            printf("                                Future                                ");
             work_card(random(info.n3));
         }
         else if (strcmp(info.type, "health") == 0)
@@ -68,9 +78,15 @@ int main()
             printf("------------|   Health   |------------\n");
             fill(info.num1, info.num2, info.num3, &info.n1, &info.n2, &info.n3);
 
+            printf("                                 Past                                 ");
             health_card(random(info.n1));
+            printf("                                Present                                ");
             health_card(random(info.n2));
+            printf("                                Future                                ");
             health_card(random(info.n3));
+        }
+        else if (strcmp(info.type, "idk") == 0){
+            //code;
         }
         else
         {
