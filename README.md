@@ -29,7 +29,8 @@
 
 ## โปสเตอร์งาน
 
-![Poster](https://user-images.githubusercontent.com/88476014/165566159-bf03113c-ab55-4bb3-b2b7-de3837ac5a81.png)
+![Poster](https://user-images.githubusercontent.com/88476014/165570808-61fa0b23-28b2-48cf-93c8-38767e64c88b.png)
+
 
 ---
 ## สมาชิกกลุ่ม
