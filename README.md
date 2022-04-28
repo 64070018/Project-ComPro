@@ -37,7 +37,7 @@
 | :---         |     :---      |          :--- |
 | 64070018   |นางสาวชนากาญจน์ สุทธิกุล     | [64070018](https://github.com/64070018) |
 | 64070040   |นายธนกร ศรีวรรณวิทย์     | [64070040Thanakorn](https://github.com/64070040Thanakorn) |
-| 64070062   |นายปณต กุศลสัตย์     | [PanotKusolsat](https://github.com/PanotKusolsat)  |
+| 64070062   |นายปณต กุศลสัตย     | [PanotKusolsat](https://github.com/PanotKusolsat)  |
 | 64070078   |นายพุฒิพงศ์  พานิช     | [PUTTIPONG3035](https://github.com/PUTTIPONG3035)  |
 
 ## SOURCE CODE
