@@ -25,7 +25,7 @@
 
 
 ## คลิปสาธิตการใช้งานโปรแกรม
-> https://www.youtube.com/watch?v=dQw4w9WgXcQ
+> https://www.youtube.com/watch?v=QSPQP2mZuJg
 
 ## โปสเตอร์งาน
 
